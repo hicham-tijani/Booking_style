@@ -30,11 +30,11 @@ COMMIT;
 --
 -- Table structure for table `booking`
 --
-ALTER TABLE `users`
+ALTER TABLE `booking`
   ADD PRIMARY KEY (`id`);
 
 CREATE TABLE `booking` (
-  `id` int(11) NOT NULL,
+  `id_booking` int(11) NOT NULL,
   `paese` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `telefono` int NOT NULL,

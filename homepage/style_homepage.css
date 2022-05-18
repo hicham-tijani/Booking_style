@@ -179,26 +179,24 @@ html {
   }
   
   #hero-button {
-    border: solid 2px white;
-    background-color: inherit;
-    color: white;
+    border: solid 3px #ffffff;
+    background-color: #ff7b8b;
+    color: #ffffff;
     margin-top: 6%;
     width: 25%;
     height: 55px;
     font-size: 15px;
     border-radius: 10px;
+    
   }
-  
+
   #hero-button:hover {
     cursor: pointer;
+    border: solid 3px #ff7b8b;
+    background-color: #ffffff;
+    color: #ff7b8b;
   }
-  
-  
-  
-  
-  
-  
-  
+
   
   /* ----- Main Content CSS -----
   
@@ -1022,21 +1020,24 @@ html {
     }
   
     #hero-button {
-      border: solid 2px white;
-      background-color: inherit;
-      color: white;
+      border: solid 3px #ffffff;
+      background-color: #ff7b8b;
+      color: #ffffff;
       margin-top: 6%;
       width: 25%;
       height: 55px;
       font-size: 15px;
       border-radius: 10px;
+      
     }
   
     #hero-button:hover {
       cursor: pointer;
+      border: solid 3px #ff7b8b;
+      background-color: #ffffff;
+      color: #ff7b8b;
     }
-  
-  
+ 
   
     /* Service Features CSS */
   
@@ -1437,22 +1438,24 @@ html {
     }
   
     #hero-button {
-      border: solid 2px white;
-      background-color: inherit;
-      color: white;
+      border: solid 3px #ffffff;
+      background-color: #ff7b8b;
+      color: #ffffff;
       margin-top: 6%;
       width: 25%;
       height: 55px;
       font-size: 15px;
       border-radius: 10px;
+      
     }
   
     #hero-button:hover {
       cursor: pointer;
+      border: solid 3px #ff7b8b;
+      background-color: #ffffff;
+      color: #ff7b8b;
     }
-  
-  
-  
+    
     /* Service Features CSS */
   
     #service-features {

@@ -38,7 +38,6 @@ CREATE TABLE `booking` (
   `id_users` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `telefono` int NOT NULL,
   `city` varchar(255) NOT NULL,
   `check_in` date NOT NULL,
   `check_out` date NOT NULL,

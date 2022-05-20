@@ -157,3 +157,8 @@
       transform: translateY(0);
     }
   }
+
+  .qrcode{
+    width: 80px;
+    height:80px
+  }

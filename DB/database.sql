@@ -36,14 +36,11 @@ ALTER TABLE `booking`
 CREATE TABLE `booking` (
   `id_booking` int(11) NOT NULL,
   `id_users` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,
   `check_in` date NOT NULL,
   `check_out` date NOT NULL,
   `adulti` int NOT NULL,
   `bambini` int NOT NULL,
-  `trasporto` varchar(25) NOT NULL,
   `classe` varchar(25) NOT NULL,
   `one_trip` boolean NOT NULL,
   `roundtrip` boolean NOT NULL

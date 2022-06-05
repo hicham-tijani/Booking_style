@@ -1,20 +1,20 @@
 /* Airport JSON list */
 const airportSearch = [
   {
-    location: "Chennai (MAA)",
-    keyword: ["Chennai", "MAA", "Chennai (MAA)"]
+    location: "Milan (MXP)",
+    keyword: ["Milan", "MLN", "Milan (MXP)"]
   },
   {
-    location: "Delhi (DEL)",
-    keyword: ["Delhi", "DEL", "Delhi (DEL)"]
+    location: "Rome Fiumicino (FCO)",
+    keyword: ["Rome", "ROM", "Rome (FCO)"]
   },
   {
-    location: "Coimbatore (CJB)",
-    keyword: ["Coimbatore", "CJB", "Coimbatore (CJB)"]
+    location: "New York John F. Kennedy (JFK)",
+    keyword: ["New York John F. Kennedy", "NY", "New York John F. Kennedy (JFK)"]
   },
   {
-    location: "Mumbai (BOM)",
-    keyword: ["Mumbai", "BOM", "Mumbai (BOM)"]
+    location: "Paris Charles de Gaulle (CDG)",
+    keyword: ["Paris Charles de Gaulle", "PAR", "Paris Charles de Gaulle (CDG)"]
   },
   {
     location: "Tiruchirapally (TRZ)",
@@ -27,7 +27,7 @@ const airportSearch = [
 ];
 
 /* Airlines Array list */
-const airlines = ["SpiceJet", "AirFrance", "Indigo", "Luftansa", "Air India", "GoAir"];
+const airlines = ["ITA Airways", "AirFrance", "KLM", "Luftansa", "Ryanair", "GoAir"];
 
 /* Flight & Airport Data */
 let SearchFlight = function() {
@@ -163,7 +163,7 @@ let SearchFlight = function() {
           {headText: "Flight Name", sorting: false},
           {headText: "Departure", sorting: false},
           {headText: "Arrival", sorting: false},
-          {headText: "Fare", sorting: true}
+          {headText: "price", sorting: true}
       ];
       let oneWayTable = new CreateTable("table",inputArrayCont,this.tableContent,"showFilter", 0, "One Way");
       oneWayTable.renderTable();
@@ -269,7 +269,7 @@ let AirlineDisplay = function() {
       rowContent.push(this.airlinesResult.departureTime);
       rowContent.push(this.airlinesResult.arrivalTime);
       rowContent.push(this.airlinesResult.price);
-      rowContent.push("<input type='button' class='bookTicBtn' value='Book Now' />");
+      rowContent.push("<a href='info_booking.php?'><input type='button' class='bookTicBtn' value='Book Now' /></a>");
       this.tableContent.push(rowContent)
     }
   });

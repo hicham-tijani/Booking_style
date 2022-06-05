@@ -31,7 +31,7 @@
             <div class="details">
                <div class="item">
                   <span>Passanger</span>
-                  <h3><?php echo $_GET["username"]; ?></h3>
+                  <h3><?php echo $_GET["name"]; ?></h3>
                </div>
                <div class="item">
                   <span>Flight No.</span>
@@ -39,7 +39,7 @@
                </div>
                <div class="item">
                   <span>Departure</span>
-                  <h3><?php echo $_GET["check_in"]; ?></h3>
+                  <h3><?php echo $_GET["Fdate"]; ?></h3>
                </div>
                <div class="item">
                   <span>Class</span>

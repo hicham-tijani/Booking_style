@@ -5,7 +5,7 @@
   <title>Flight Search</title>
   <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style.css">
 
   </head>
 
@@ -13,14 +13,17 @@
     <!-- Main Content -->
     <main>
       <header>
-        <!--<h1><i class="planIc fa fa-plane"></i></h1>-->
+   
       </header>
       <!-- Body Content Starts -->
       <section id="bodyCotainer">
         <!-- Flight Search From Starts -->
+
+  
         <div class="filterSearchFilter">
           <aside id="flightSearch">
-            <form name="searchFlight">
+        
+            <form name="searchFlight" action="./info_booking.php" method="post">
               <div class="radio-toolbar">
                 <input type="radio" id="radioOneWay" name="trip" value="One Way" checked>
                 <label for="radioOneWay">One Way</label>
@@ -28,29 +31,29 @@
                 <input type="radio" id="radioRoundTrip" name="trip" value="Round Trip">
                 <label for="radioRoundTrip">Round Trip</label>
               </div>
-              <div class="sourceDesination">
-                <input type="text" id="fromPlace" placeholder="From" onkeyup="flight.airportAutoSuggestion(event)" />
-                <ul id="source"></ul>
+              <div class="sourceDesination" name="from">
+                <input type="text" id="fromPlace" placeholder="From" name="from" onkeyup="flight.airportAutoSuggestion(event)" />
+                <ul id="source" name="from"></ul>
                 <span class="error"></span>
               </div>
-              <div  class="sourceDesination">
-                <input type="text" id="toPlace" placeholder="To" onkeyup="flight.airportAutoSuggestion(event)" />
-                <ul id="destination"></ul>
+              <div  class="sourceDesination" name="to">
+                <input type="text" id="toPlace" placeholder="To" name="to" onkeyup="flight.airportAutoSuggestion(event)" />
+                <ul id="destination" name="to"></ul>
                 <span class="error"></span>
               </div>
               <div id="depatureDate">
-                <input type="text" placeholder="Travel Date" onfocus="(this.type='date')" id="travelDate" onchange="flight.validateEnteredDate(event)" />
+                <input type="text" placeholder="Travel Date" name="Tdate" onfocus="(this.type='date')" id="travelDate" onchange="flight.validateEnteredDate(event)" />
               </div>
               <div id="returnDate">
-                <input type="text" placeholder="Return Date" onfocus="(this.type='date')" id="dateOfReturn" onchange="flight.validateEnteredDate(event)" />
+                <input type="text" placeholder="Return Date" name="Rdate" onfocus="(this.type='date')" id="dateOfReturn" onchange="flight.validateEnteredDate(event)" />
               </div>
               <div>
-                <input type="number" id="noOfTravelers" onchange="flight.validateTravelers(event)" min="1" max ="8" placeholder="Number of Travelers">
+                <input type="number" id="noOfTravelers" name="members" onchange="flight.validateTravelers(event)" min="1" max ="8" placeholder="Number of Travelers">
               </div>
               <div>
                 <input id="searchBtn" type="button" onclick="flight.submitValues(event)" value="Submit" />
               </div>
-            </form>
+          </form>
           </aside>
           <div class="filterDetails">
             <div id="showFilter" class="showFilter"></div>
@@ -58,22 +61,23 @@
           </div>
         </div>
         <!-- Flight Search From Ends -->
+
         <!-- Flight List From Starts -->
         <div id="FlightResult">
-          <div class="beforeSearch"><i class="fa fa-fighter-jet" aria-hidden="true"></i>Cerca il tuo volo</div>
+          <div class="beforeSearch"><i class="fa fa-plane" aria-hidden="true"></i>Cerca il tuo volo</div>
           <div class="flightOnward flightResultWrapper">
             <div class="flightResultHeader">
               <div class="headerStartingDate">
-                <h4 class="headStartLoc"></h4>
-                <p class="headStartDate"></p>
+                <h4 class="headStartLoc" name="from"></h4>
+                <p class="headStartDate" name="Fdate"></p>
               </div>
               <div>
-             
+       
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAACKklEQVRYhe2XQWsTQRSAvzcpjdpopC1BUtZCsQgSsWAhBS96FD1XMIIHqR6kCPoH/AWC9FZEPFiheFR78qAXrVKxYA1oQKshrUhKbEjFiJnnYWuSHpJNYppF8F2GZd6+75uZB7sjbIamUkF6ui+BnAViQA/tjQ1gCZUZvv+YluHhIoAAaDo9QEAfAUfaDK0RukjJnBbHyYi78uCLzsGrJDZ+jhl32zsNB5ARdu2YMCCJzsP/hCYMcMg3vhAzQMg3AQgZH+EA/BdoXkAVzSzD+lpbBLo8eUsL8HUVOXoMwr3ox/fYqesASGwUc/4KdHmWqRmeO2Dv3MQ+uId99tiFDh6AcF9Zzs7NtgxvSIDSL3d8s+COgQAydrw8rU/m0A/vWhZoeO90NY0mX8PuvcjAIFqesNjZacy5y2x+25BgEPr3gfFen+jKZ62XULqWAGsb9axEuA9z4SriDNVN81SU6P7m4QDra+j9W55p3gLjE+WmazY0n/fM8TwCwD2C7Be0WHSfv2Wxt29U5iPRLT1QLt4fgZ31f6waa0JjIBItl7dvX1VRDObMRc+zrlm66TesRV8+rfBPnEKGDrYEb0lAl1OQy7rww6OYk+Mtw6HRHthioOjKJyS0B8K9fwVvTaDN8Q9+jrdBoOAjP2+ApG94JWlQueubADKzeTXrngcZ6SxcF8kV4lWXU/uwcxKVy6kBEMfJkCvEUZlEmWd7GrOA6HNUJskV4uI4GYDf+pK1FUoQTrwAAAAASUVORK5CYII="/>
               </div>
               <div class="headeReturnDate">
-                <h4 class="headEndLoc"></h4>
-                <p class="headEndDate"></p>
+                <h4 class="headEndLoc" name="to"></h4>
+                <p class="headEndDate" name="Tdate"></p>
               </div>
             </div>
             <table id="table"></table>
@@ -102,7 +106,7 @@
       <footer></footer>
     </main>
 
-  <script  src="./script.js"></script>
+  <script  src="script.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,44 @@
+.flex-1 {
+  flex: 1;
+}
+
+body{
+  background-image: url("https://i.pinimg.com/564x/cf/60/0d/cf600d274bbf9d27a96ae3020121eac7.jpg");
+}
+
+.card-body {
+  border-radius: 25px;
+  border: 2px solid #0081a7;
+ }
+ 
+ .my-2 {
+    border-radius: 25px;
+ }
+ 
+ .h-100 {
+   border-radius: 25px;
+ }
+
+.form-control {
+  border-radius: 25px;
+}
+
+.spinner-border{
+  color: rgb(255, 111, 0);
+  background-color: blueviolet;
+}
+
+.list-group{
+  border-radius: 25px;
+}
+
+.list-group-item:first-child {
+  border-radius: 25px;
+  border: 1px solid #0081a7;
+}
+
+.list-group-item+.list-group-item {
+  border-radius: 25px;
+  border: 1px solid #0081a7;
+  box-shadow: #0081a7;
+}

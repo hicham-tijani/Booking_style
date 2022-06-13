@@ -127,7 +127,8 @@ const showResults = (results) => {
           `;
           })
           .join("")}
-        <span class="bg-info rounded-pill m-2 badge fs-6">${priceLabel}</span>
+          <span class="bg-info rounded-pill m-2 badge fs-6">${priceLabel}</span>
+          <a href="./Ticket.html"><span class="bg-warning rounded-pill m-2 badge fs-6">Prenota</span></a>
       </li>`
     );
   });

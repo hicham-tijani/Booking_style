@@ -25,6 +25,7 @@
           <div class="row">
             <div class="col-sm">
               <div class="mb-2">
+             
                 <label id="origin-label" for="origin-input" class="form-label">From</label
                 >
                 <div class="input-group">
@@ -36,6 +37,7 @@
                     id="origin-input"
                     placeholder="Location"
                     aria-describedby="origin-label"
+                    name="from"
                   />
                   
                   <datalist id="origin-options"></datalist>
@@ -59,6 +61,7 @@
                     id="destination-input"
                     placeholder="Location"
                     aria-describedby="destination-label"
+                    name="to"
                   />
                   <datalist id="destination-options"></datalist>
                 </div>
@@ -93,18 +96,15 @@
                   id="departure-date-label"
                   for="departure-date-input"
                   class="form-label"
-                  >Departure date</label
-                >
+                  >Departure date</label>
+
                 <div class="input-group">
-                  <span class="input-group-text"
-                    ><i class="bi bi-calendar-event"></i>
-                  </span>
-                  <input
+                  <img src="https://img.icons8.com/avantgarde/38/undefined/experimental-calendar-avantgarde.png"/>
+                  &nbsp;<input
                     type="date"
                     class="form-control"
                     id="departure-date-input"
-                    aria-describedby="departure-date-label"
-                  />
+                    aria-describedby="departure-date-label" name="date"/>
                 </div>
               </div>
               <div id="return-date" class="mb-2">
@@ -154,8 +154,9 @@
               <label class="form-label">Passengers</label>
               <div class="mb-2">
                 <div class="input-group">
-                  <label for="adults-input" class="input-group-text"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABmJLR0QA/wD/AP+gvaeTAAAA9UlEQVRIid3VsUrDUBSH8V9FpYKDOIkP4CxdCy6O4uS76BsITuLm7gO4ODl3KNSuBcFZoQqiblqIgxZrTHtPQqDgB5dwc/P/csM53FCOZsnnQ6zhCiM8YL9O+SmyifH2/cKZLATl27n5Krbqkndy8ycMgtkkKzjHEH20I6FGYP0ALX+/8hkXuC+1zQnO/C5kfgyxWUXcxHtCnuFwmmBWQdexFNjERhX5mB5uC+5fpoKLAfnrlE3cpYLRPq/E3OSj3BUeE+ulOMIObny13YmfFtzDscAZk6JIvpsK/c+CzlWe1SXv4QPX6OJF8ZFQmfGfv4HlSOATzvE8Alqwn8YAAAAASUVORK5CYII="/></label
-                  >
+                  <label for="adults-input" class="input-group-text">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAADFElEQVRIie2XP2wbVRzHP7/3zmc7FyekhIS2CaC0qlGqlFZFIATqQKUWsWZgAAkGRiTEAIihIwsLAzOCqQsrDEUBQhGitFQKKHbOUtsojoQT2SZx/CfxpfcegxVZonLOJ1di6U+64ffue9/P3Xu/e/c7IWbMzMyMplz3s3DEm0cp0dv1q24qdWVpaWk7jo8Tk6tcz1tovnnp+f3zz4IIiRvL75mr358DLgCmXyMdh3o6m70cvHzmo/alF0EEADM1gdraeepYK7xerlZX+36COGCj1IlwevKB8XB6klDkZByvWGBlzF29vvnAuF7fRETuxfGKNdXlanX1yX172R4ZnQqPjR+sMclrv//q5/NX4nhJv8JsNntGKfUh8BLWnjAjHmIs0mghcM/Ab8Dnvu/ffmjg09nsa8HTk9/tzV9U4TNHQf93hSx6tcTQNz8EUtyc933/24HBc3NzY0FmqNj4+K1h66UPN9ttM/zp1zWn3prK5XKNw7SRxRUGwRvBhbPD1kvjFIo9dU5hDZtO0n71/Kgx5t0o3+iqFnk9OHsKrCW5cLOnLLlwC4D7cyfB2osDg63IcTs2jNqqI43d3kY7TVS9hRkfhYQ6NTjYSx1Ha6S1FyWFnSaIYFKpscHBodkHwOnjlU90tn7ZD1sDg9VeUBFjMREVDUA6CaFB9trVgcHW2g2pNbCZNNZN9NYlHEwmjao1AEoDgxXk9N9lQDCTR7onQtM5DtKjjwOCKlVBJD8w2MCyKnVmzkx0ayZRWMO5s97VTXRuSpfKWGsjwZGNgIj85N5eCcLpCVcXN3rqdHEDp7CG+4cfaK1/jPKNLNVKpVJ7wk3/4t7MN3GcF4JXnutcWN4GJZjxxwBIXbuBu3DrC1VvfZLP5/+K8u3re+z7/s9DnvdBH7r3V1ZWrvfjGasReJjxCPwI/P+DM5mMxRh7kFsLdFOstX3/RcQCLy4u3tfVmq8q22AtieW7OLlOK602/0FXan8C9nCXbvTd3gLMzs6eM1p9Zb30jNra+VJEnHBs5G3V3L1j2sE7hUIhcsc6iH8B8Ukq8aIgpnMAAAAASUVORK5CYII=">
+                    </label>
                   <input
                     type="number"
                     min="0"
@@ -170,7 +171,9 @@
               </div>
               <div class="mb-2">
                 <div class="input-group">
-                  <label for="children-input" class="input-group-text"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABU0lEQVRIidXWPS8uQRQH8B+REEGh0bhevoCQkBDFjYZGJCqN7yEqWrVQ6jUUXiIhub6BkNvo0QmNkBAUOxtPHju786DxT07mzJ6X/zmzJ7NLGrqwgRtcB70zMbYSTTjEW50cB9u3MVyQPJehquDmBIK+Elt/Qnwl/uDF5+qf0fsTBLBaQLCSEtjIS5rFfNB3cPATBB1YxjS662y3OMIaHpLLrMOJ+ATlcvjV5JMJyXMZjSUpG9OZBoqJ+pYR/A3rfYnPXVinGigGtONJ1v6u+NHktke0FSVqiRBMoBWv2MRlxO8YcyH5OE5TCfKWL9CDpYjff5xjJMR8Ioi9g7Gw/ovYa3ES1vEiY6yDLdnZrsvGtQwbslt1q8iYclWMYCHoeUf5EW7jLCFHKRZ9TE17kHy/WBWc8j34Fn4/QWyKavEW0Yv2X8Kg7Fdlr+bZPq4wUBX8DvtKX4huHl8gAAAAAElFTkSuQmCC"/></label>
+                  <label for="children-input" class="input-group-text">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAABmJLR0QA/wD/AP+gvaeTAAAC20lEQVRIie2Wz0tUURTHv+e+mdH8EZlNM/cO/mRAyywJKkGLKJE2tTCSNhEEBS7aSBD9CUFGi5YRERQUuLGNEFikRvbDwkVRVjqpzxk0zZH54cx797YYDaXQd0WToLO57917zvdzz3nv/gD+YWN/G0ic8wslATFYWyms0oD4xDk/D4B0hQzdAM75lcZy48atE56tZ3a72elqo3A0qo5P2HnJ2dnZHh0trdl6vd680gL3VHtzttu1qOCWBE4+TKa/zdgFkUgk5lRP65sxxnbV+I0lYABwMaDGb7gBVGvp6TgDiEwm5B8HJuISRBReN3gkEhl+PWb39Y8vncCbcYlXpnweDoeHdfS0f7jsTTlPHn+VjVNJbJtKAB0fbVzvS39IWfJULBab1tHSXh5CiBwAe5VSpUQUUEqNEdEwgH7TNOM6Wo7LHgwGszjnbcWbEW0oY91ZjFqVUp+zGLU2lLHu4nxEhRDXgsFgllNNx5lzztvO7nG1XtznBhHwNizRO2KjvshAjZ9BArj50sLdAavNNM1LawYXQuQU5yPa3pxt0DIREkDTg6Rtxlj+6OhoYiVdR2VXSu3c4WXLghfEqrzMsG27yomuIzgRZXscrguPkfFfM/h62YbCXboBAxGJpyH7t/7DJQZ2+/Ry0Ya/n5S48y59G0Dnou5j23Pp3LrAlVKJpJV5jqcBIiokonKl1A8i2qKUKkykM+OJjJ+jnc7pJuMuCYhn9SWsViqgrojBkoSrvSlcrvPAxRR6RyQYAT0h+SI0Zh4EYK0k6rRO6dCYeahryG7x5xKaKl04UpYJPVrG0FTpgj+X0DVktzgF68ABIA3g15EZTapMO7fEZ9gpWBe+xGZT8+2cWq3E6uEz85nPbAR8PvPUQgXWHS6lnJ6IZzL9Mq2glOoc/J65Uk3EFaSUWjcZXWOc8/v7K4Ql/P4On8+XGxDi0YGKgMU5v4dV3IxWY+4V3v/bsvYTH0YLAZTrwusAAAAASUVORK5CYII=">
+                  </label>
                   <input
                     type="number"
                     min="0"
@@ -185,8 +188,9 @@
               </div>
               <div class="mb-2">
                 <div class="input-group">
-                  <label for="infants-input" class="input-group-text"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABMElEQVRIieWTvUoDURCFPyWkTWVj1mCRTm3F0jcIghY+g9b6CutbKBZCGvGvFJ8glWCtRVZBEIWAqOhaeALD5ro7ZtdCPDBcOHPPOcvMXvgvqAM7QAL0gVhcZYiBNFNxlQFJIODWI5x0BqQB7r3KgH0nNzbqfM28zy8teWxMFPSngXVgGVgApsTfA5fABXCAc+EWEbAHvDH692TrFdgFml7zFeDBiD0BqTSdIvNN4EOCQ6DtCGjrbirtRl5AE+iZSzVjlMWQr5mP6+EYlX0ba8YoMvyM4Ve/0bpwYoxOFRIBZ4Y//qmpxZ1Mnhid/ZBLygQ8y2Qe6AKPqi4wp95LmYArmSwGekvqXecZFC3lXOd2oLel86jAIxezwAC4ARqGb4gb6E4pdIBWgG/heLl/H5+6/3A4YYxNTQAAAABJRU5ErkJggg=="/></label
-                  >
+                  <label for="infants-input" class="input-group-text">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAEK0lEQVRYhe2Vf0yUdRzHX89zv7g7uAMcyK870LQW4A8MUKSrkbHp2qqt0NWS1paazlWrpvZH/5aKueYfGiRutFVT2VJqkCbkSDSKCR0KHlGmQXHgKRBwHsc93/64g5GAPUf0R5vv/76fz+f7/rye7/N9ng/c0+yUAFRoZUOXVjZ0ARWhWNiSZrEnzqyLbH0uZ9v8bNvDADRd/5bPmg65h/1DmcCNcMw0swDY+3z21oLVCx5HlmRkSSYlegFmQ1Tkj92NJqAmHDM53O4SkuMhm2NKPNvmQEKamphrAIHw+pXRKfFRxY9A3P7PAYDT9Z1TT7m+sxrgq3DNZnMHvvupr/2JgOJPiDbGMuQb5GvXCaovVzYLlJeAsXDMZvMVABiA14DHAAHUAQcAX7hG4QJkAIWAA7BLSPEAAtELXAPOAaeBtrkGeAZ4c1FcRt6y5JXcH5dJfGQiZoMFgGHfIL1Df9DRd4mWrgv8fKP9PLAP+PzfAqQBH6+w5TueXPICydZUVbTd/b9SdekTLv7WUA8UEzydsAGeshiiK15c9bp1aVKuqsZ3ytn9PRWNHwwM+vqLgarpamb6CjbYYxYde2vNbmNa7GIABIJh35/otYa7Nh3yDaLT6pGQmG9JJjf10QhXr3PDwO1bnUCrKgCdrD/+ztoD8VZjLP7AKLUdJzl8voR+r4clSTl3BahsKefTpkMoQsEecx9mQxTZNof0TceXeQExtv/Oeu10JmOKv6ejr/VBIQSVzUdGPSPu/UCT1z9SCfDD9XrKGnYPAJ7Qlnmb83dZc+yP4PWP4Bl2P3u8+XB2neuLN55etlFv1JnwK6Oe6XpNCyAQL3947t2dBP+U7wG/AK/qNDoAjDozwFFgS2hLqVFn3gygDdYkAW97Rtxl5Rf2bQWswF7VAKGGWyat7fNM8XvWZ20KAZgImY7LGoqxfvkm2n6/uOemt+8kcBXYMUMPQP0s2LY2vSgiItQk0WJDI+vyAAtg0ci61UkWexBOb2JdRpEReEWNsVqAgqyUvImFSR/Jxpzt9ki9pStKb+0uztluM+rNE/nlwdoCNcYzvYK/SSNrbRZjzMRaEQr5CwvJX1gYNTkmS8HnsRpj0cja1IDyz3NJ1QkElLFbPn9wzggEJbU7ueJ2oggFRShccTspqd2BQADg83sJKGM31XirOgGgsaPXmb40ORcJCc+wm/frdtXIkpwJCEUol2NNceuk0I/V1esEaFRjrPYOlJ9xnZhYpCdkAZQqQrErQkkFPkpPXDGRr3VVARyZS4CGdnfL2faeZgBWpa2B4IQcV9HK1OCda+9ppt3dchZomEsAgIMNV88AkBKcig9Myi1Ojk4LkgZrDqo1DQegXwiBEILqtmMApyblTtW0HWU8D/SH4ataOqDMqDdfA0oB/aScASgN5cpCtff0/9Bfd0tqV6poKWgAAAAASUVORK5CYII=">
+                    </label>
                   <input
                     type="number"
                     min="0"
@@ -204,6 +208,7 @@
         </div>
       </div>
       <button id="search-button" class="w-100 btn btn-primary">Search</button>
+  
       <div class="border-bottom mb-4 pt-4" id="search-results-separator"></div>
       <div class="d-flex justify-content-center" id="search-results-loader">
         <div class="spinner-border" role="status">

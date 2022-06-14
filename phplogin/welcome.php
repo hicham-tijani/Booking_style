@@ -20,11 +20,11 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
 
-
-    
+            
     
       <div class="welcome">
-	<div class="name"><?php echo "<h1>Ciao "."<font color=coral>". $_SESSION['username'] ."</font>"."</h1>"; ?></div>
+        
+	<div class="name"><?php echo " <h1>Ciao "."<font color=coral>". $_SESSION['username'] ."</font>"."</h1>"; ?></div>
 
       <a href="logout.php"><button class="esci">Esci</button></a>
 	</div>

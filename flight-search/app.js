@@ -4,8 +4,8 @@ require("dotenv").config();
 
 const app = express();
 const amadeus = new Amadeus({
-  clientId: process.env.API_KEY='XgGnAFrtuhGBR1djJ6uIzLs3qNLZW6ng',
-  clientSecret: process.env.API_SECRET='QT3YwcsegGYkfC1O',
+  clientId: process.env.API_KEY='vY9SSZ8fWVD9tsScaZ7ScVqvnBaF0OcR',
+  clientSecret: process.env.API_SECRET='ecZJAee2KYPaW6Vz',
 });
 const port = 3000;
 

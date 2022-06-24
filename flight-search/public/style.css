@@ -3,12 +3,12 @@
 }
 
 body{
-  background-image: url("https://cdn.pixabay.com/photo/2021/03/04/11/56/background-6067769_960_720.jpg");
+  background-image: url("https://i.pinimg.com/564x/4a/52/da/4a52daf3b894a10b28b43f37414e6409.jpg");
 }
 
 .card-body {
   border-radius: 25px;
-  border: 2px solid #0081a7;
+  border: 2px solid #89d7c5;
  }
  
  .my-2 {
@@ -24,8 +24,8 @@ body{
 }
 
 .spinner-border{
-  color: rgb(255, 111, 0);
-  background-color: blueviolet;
+  color: rgb(79, 201, 193);
+  background-color: rgb(31, 41, 66);
 }
 
 .list-group{
@@ -34,11 +34,11 @@ body{
 
 .list-group-item:first-child {
   border-radius: 25px;
-  border: 1px solid #0081a7;
+  border: 1px solid #89d7c5;
 }
 
 .list-group-item+.list-group-item {
   border-radius: 25px;
-  border: 1px solid #0081a7;
-  box-shadow: #0081a7;
+  border: 1px solid #89d7c5;
+  box-shadow: #89d7c5;
 }

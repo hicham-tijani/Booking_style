@@ -10,7 +10,7 @@ html, body {
 body {
   @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
   font-family: "Ubuntu", sans-serif;
-  background-color: #3f32e5;
+  background-image: url("https://i.pinimg.com/564x/f5/af/38/f5af38611cd1bda1f68876a13bb6436e.jpg");
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -116,7 +116,7 @@ body {
 }
 .ticket-system .receipts .receipt.qr-code::before {
   content: "";
-  background: linear-gradient(to right, #fff 50%, #3f32e5 50%);
+  background: linear-gradient(to right, #fff 50%, #438daf 50%);
   background-size: 22px 4px, 100% 4px;
   height: 4px;
   width: 90%;
@@ -157,3 +157,7 @@ body {
     transform: translateY(0);
   }
 }
+
+
+
+

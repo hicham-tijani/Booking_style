@@ -42,3 +42,8 @@ body{
   border: 1px solid #89d7c5;
   box-shadow: #89d7c5;
 }
+
+.travel{
+  position: relative;
+  top: 10%;
+}

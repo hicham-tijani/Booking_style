@@ -3,9 +3,4 @@ Book your holiday by choosing the destination you want and the most convenient f
 
 - To start the search for flights, open the terminal in the 'search-flight' folder, and type the following commands.
     
-     npm install         
-     npm run start
-     
-     
-     
 Enjoy ✈ 
